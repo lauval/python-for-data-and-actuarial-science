@@ -6,7 +6,7 @@ A hands-on Jupyter notebook designed for actuarial science students transitionin
 
 The notebook uses the **freMTPL2freq** dataset: ~678,000 French motor third-party liability policies from the [CASdatasets](https://dutangc.github.io/CASdatasets/) R package, hosted on [OpenML](https://www.openml.org/d/41214). It includes claim counts, exposure periods, driver demographics, vehicle characteristics, bonus-malus coefficients, and regional data.
 
-The dataset downloads automatically on first run via `sklearn.datasets.fetch_openml` and is cached locally as a CSV for subsequent runs.
+The dataset downloads automatically on first run via `sklearn.datasets.fetch_openml` and is cached (saved) locally as a CSV for subsequent runs. For your convenience, the csv is included in this repo so you can get going with this project offline if you prefer.
 
 ## Getting Started
 
@@ -21,19 +21,24 @@ The dataset downloads automatically on first run via `sklearn.datasets.fetch_ope
 2. (Recommended) Create a virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate        # macOS/Linux
-   venv\Scripts\activate           # Windows
+   source venv/bin/activate  # activate env on macOS/Linux
+   venv\Scripts\activate     # activate env on Windows
    ```
 
 3. Install dependencies:
    ```bash
    pip install pandas numpy matplotlib seaborn statsmodels scikit-learn jupyter
    ```
+   Alternatively, if you have [`uv`](https://docs.astral.sh/uv/) installed, you can simply sync with the existing pyproject.toml file to install dependencies:
+   ```bash
+   uv sync
+   ```
 
 4. Launch the notebook:
    ```bash
    jupyter notebook python_for_actuaries.ipynb
    ```
+   Or run in Visual Studio Code.
 
 ## What's Inside
 
@@ -53,13 +58,13 @@ If you get stuck or want to go deeper, these are worth bookmarking.
 ### Python Fundamentals
 
 - [Python Official Tutorial](https://docs.python.org/3/tutorial/) — the authoritative walkthrough of core language features.
-- [Real Python](https://realpython.com/) — well-written tutorials on practically every Python topic, with a search that actually works.
+- [Real Python](https://realpython.com/) — well-written tutorials on practically every Python topic.
 
 ### Pandas
 
 - [pandas Getting Started Tutorials](https://pandas.pydata.org/docs/getting_started/intro_tutorials/) — the official step-by-step guides, organised by task (selecting data, creating plots, reshaping, etc.).
 - [pandas API Reference](https://pandas.pydata.org/docs/reference/) — when you know a method exists but can't remember the arguments.
-- [Comparison with R](https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_r.html) — an official pandas page that maps R/dplyr operations to their pandas equivalents. Extremely useful for your transition.
+- [Comparison with R](https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_r.html) — an official pandas page that maps R/dplyr operations to their pandas equivalents.
 
 ### Visualisation
 
